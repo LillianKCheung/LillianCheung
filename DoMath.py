@@ -5,4 +5,5 @@ a = 10
 b = 45
 
 answer = numpy.sin(b/180*numpy.pi)
-print(answer)
+rounded=round(answer,2)
+print(rounded)
