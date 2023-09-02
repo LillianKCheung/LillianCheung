@@ -1,18 +1,26 @@
 import random
 from wonderwords import RandomWord
+import math
 mad_lib=RandomWord()
-#this is an example of how to round and answer.
-"""
+def print_devider():
+  print("/----------------------------------------------------------------------------------------/")
+
+#These projects predate the Function and Object file and are demonstrations of different python skills.
+#They are here as a sort of reference guide.
+#how to round
 equation=round((4.5*734+127/49),3)
 print(equation)
 eqround2=round(equation,2)
 print(eqround2)
-#how to exponant : 2**3 = 8
+print_devider()
+#how to use exponents: 2**3 = 8
 
 #Example of powers
 SixSqQuilt=6 ** 2
 print(SixSqQuilt)
-#modulo operator % is a round that has issues cause it cuts shit off.
+#modulo operator % is a round however this should only be used in terms of an if else or boolean logic not for mathematical accuracy.
+
+print_devider()
 
 #magic 8 ball: how to use random import random .radint()
 name="Lillian"
@@ -52,31 +60,31 @@ else:
     print("Keep trying, you will win eventually.")
   else :
     print("Error")
+print_devider()
 
-    #This is a discussion about how to use type errors.
-import math
 
     # area of a triangle
 base = 20
 height = 30
 Area = base * height * 0.5
 
-print("The Triangle Area is : ", Area)
 
+print("The Triangle Area is : ", Area)
+print_devider()
     # area of a rectangle
 l = 2
 w = 12
 Area = l * w
-
+print_devider()
 print("The Rectangle Area is : ", Area)
-
+print_devider()
     # Area of a circle
 radius = 36
 Area = math.pi * radius ** 2
 
 print("The Circle Area is : ", round(Area, 2))
 # can use a comma instead of a + to add a string and int together
-
+print_devider()
 #Lists (how to append and remove)
 orders = ["daisies", "periwinkle"]
 print(orders)
@@ -89,6 +97,7 @@ print(new_flowers[1])
 print(new_flowers[-1])#this is coming at the end of the list from the bottom up
 new_flowers[0]="Gardenia"
 print(new_flowers)
+print_devider()
 #list 2D
 family_ages=[["mom",65],["dad",68],["bro",41],["sis",40],["me",38],]
 family_ages.append(["ChiHo",40]) #this method will only append one type of list at any one time.
@@ -106,12 +115,14 @@ print(married_details)
 preferred_size=["Small","Large","Medium"]
 preferred_size.append("Medium")
 print(preferred_size) # differences to the list
+print_devider()
 #REMOVEAL FROM A 2D ARRAY
 customer_data=[["Ainsley","Small",True],["Ben","Large",False],["Chani","Medium",True],["Depak","Medium",False]]
 print(customer_data)
 customer_data[2][2]=False
 customer_data[1].remove(False)
 print(customer_data)
+print_devider()
 # use verb=zip(item1,item2) then verb2=list(verb) to combine two lists into one and make it an imutable tuple.
 #FOR LOOPS EXAMPLES AND INSTRUCTIONS!
 ages = [12, 38, 34, 26, 21, 19, 67, 41, 17]
@@ -121,35 +132,42 @@ for age in ages:
     continue
   print(age) # continue is inside the if statement and printing happens one tab over from this , this will skip the
   #peramitor you do not want to keep or print.
+  print_devider()
   sales_data = [[12, 17, 22], [2, 10, 3], [5, 12, 13]]
   scoops_sold = 0
+
   for location in sales_data:
     print(location)
     for scoops in location:
       scoops_sold += scoops
   print(scoops_sold)
+  print_devider()
   #in order to add the sums of a list make sure and look at scoops and scoops_sold for how to add in a for loop.
   grades = [90, 88, 62, 76, 74, 89, 48, 57]
   #this is filling a list WITH A FOR LOOP THAT IS BEING CHANGED AND FILLED AT THE SAME TIME. 
   scaled_grades = [grade + 12 for grade in grades]
   scaled_grades.sort(reverse=True)
-  print(scaled_grades) #fucking awesome example of creating a list and a for loop inside of a list.
-  THIS IS ANOTHER EXAMPLE OF FOR LOOPS INSIDE OF A LIST
+  print(scaled_grades)
+  print_devider()
+  #This is also a sort and reverse sort feature.
+  print_devider()
 single_digits=[0,1,2,3,4,5,6,7,8,9]
 squares=[single**2 for single in single_digits]
 print(squares)
 cubes=[single**3 for single in single_digits]
 print(cubes)
+print_devider()
   # this is adding to a list and using an if statement
-  heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
-  can_ride_coaster = []
-  for height in heights:
+heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
+can_ride_coaster = []
+for height in heights:
     if height <= 161:
       continue
     can_ride_coaster.append(height)
-  print(can_ride_coaster)
-  PROJECT EXAMPLE OF LOOPS AND LIST 
-  hairstyles = ["bouffant", "pixie", "dreadlocks", "crew", "bowl", "bob", "mohawk", "flattop"]
+print(can_ride_coaster)
+print_devider()
+#PROJECT EXAMPLE OF LOOPS AND LIST
+hairstyles = ["bouffant", "pixie", "dreadlocks", "crew", "bowl", "bob", "mohawk", "flattop"]
 
 prices = [30, 25, 40, 20, 20, 35, 50, 35]
 
@@ -166,6 +184,7 @@ average_price=total_price/avg
 print(average_price)
 new_prices=[price-5 for price in prices]
 print(new_prices)
+
 for i in range (8):
   total_revenue+=prices[i]*last_week[i]
 print(total_revenue)
@@ -175,7 +194,12 @@ cuts_under_thirty=[]
 for i in range (len(new_prices)):
   cuts_under_thirty+=[hairstyles[i],prices[i]]
 print(cuts_under_thirty)
-  """
+print_devider()
+
+
+#this next project is silly but one that I am probobly the most proud of, its not a project I was doing to learn
+#I was coming up with a mad lib for my git hub name. There are definately better ways to store the list shown here and in the end
+# I did not get to keep the name this created. However, this was probably the first time I ever coded for fun.
 adverbs = ["abnormally", " absentmindedly", " accidentally", " acidly", " actually", " adventurously", " afterwards",
          " almost", " always", " angrily", " annually", " anxiously", " arrogantly", " awkwardly", "badly",
          " bashfully", " beautifully", " bitterly", " bleakly", " blindly",
@@ -236,5 +260,7 @@ for name in range(10):
   noun = mad_lib.word(include_parts_of_speech=["noun"])
   adverb=adverbs[radvb]
   print(adverb+ " " +adj+ " " + noun)
+  #control / will commment out and uncomment out with keyboard shortcut.
 
+print_devider()
 
